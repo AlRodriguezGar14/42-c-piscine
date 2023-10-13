@@ -6,7 +6,7 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 18:21:03 by alberrod          #+#    #+#             */
-/*   Updated: 2023/10/12 21:33:08 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/10/13 13:22:04 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 
 void	ft_print_alphabet(void)
 {
-	write(1, "abcdefghijklmnñopqrstuvwxyz\n", 29);
-}
+	char	alfabeto;
 
-int	main(void)
-{
-	ft_print_alphabet();
-	return (0);
+	alfabeto = 'a';
+	while (alfabeto <= 'z')
+	{
+		write(1, &alfabeto, 1);
+		alfabeto++;
+	}
+	write(1, "\n", 1);
 }
