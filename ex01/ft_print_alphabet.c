@@ -6,7 +6,7 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 18:21:03 by alberrod          #+#    #+#             */
-/*   Updated: 2023/10/13 14:12:05 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/10/13 20:40:10 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,4 @@ void	ft_print_alphabet(void)
 		write(1, &alfabeto, 1);
 		alfabeto++;
 	}
-	write(1, "\n", 1);
 }
