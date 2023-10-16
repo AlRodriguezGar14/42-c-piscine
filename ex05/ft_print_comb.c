@@ -6,7 +6,7 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:28:53 by alberrod          #+#    #+#             */
-/*   Updated: 2023/10/16 12:26:03 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/10/16 19:36:23 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_print_char(char hundreth, char decimal, char numeral)
 	write(1, &hundreth, 1);
 	write(1, &decimal, 1);
 	write(1, &numeral, 1);
-	if (!(numeral == '9' && decimal == '8' && hundreth == '7'))
+	if (!(numeral == '9' && decimal == numeral - 1  && hundreth == decimal - 1))
 	{
 		write(1, ", ", 2);
 	}
