@@ -6,7 +6,7 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:28:53 by alberrod          #+#    #+#             */
-/*   Updated: 2023/10/16 11:42:51 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/10/16 11:46:58 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void	ft_print_comb(void)
 
 	hundreth  = '0';
 
-	while ((hundreth < decimal || hundreth != decimal))
+	while (hundreth != decimal)
 	{
 		decimal = hundreth + 1;
-		while ((decimal < numeral || decimal != numeral))
+		while (decimal != numeral)
 		{
 			numeral = decimal + 1;
 			while (numeral <= '9')
