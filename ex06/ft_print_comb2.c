@@ -1,64 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 13:05:05 by alberrod          #+#    #+#             */
-/*   Updated: 2023/10/16 14:48:05 by alberrod         ###   ########.fr       */
+/*   Created: 2023/10/17 13:58:03 by alberrod          #+#    #+#             */
+/*   Updated: 2023/10/17 15:44:12 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-void	ft_printchar(char a, char b, char c, char d)
-{
-	write(1, &a, 1);
-	write(1, &b, 1);
-	write(1, " ", 1);
-	write(1, &c, 1);
-	write(1, &d, 1);
-	if (!(a == '9' && b == '9' && c == '9' && d == '9'))
-	{
-		write(1, ", ", 2);
-	}
-}
-
-// The content of the array num is equivalent to ab cd
-// num[0] is a
-// num [1] is b
-// num [2] is c
-// num [3] is d
 void	ft_print_comb2(void)
 {
-	char	num[4];
+	int	a;
+	int	b;
+	char	printer[5];
+	int		index;
 
-	num[0] = '0';
-	while (num[0] <= '9')
+	printer[2] = ' ';
+	a = 0;
+	while(a < 99)
 	{
-		num[1] = '0';
-		while (num[1] <= '9')
+		printer[0] = a / 10 + '0';
+		printer[1] = a % 10 + '0';
+		b = a + 1;
+		while (b <= 99)
 		{
-			num[2] = '0';
-			while (num[2] <= '9')
+			printer[3] = b / 10 + '0';
+			printer[4] = b % 10 + '0';
+
+			index = 0;
+			while(index < 5)
 			{
-				num[3] = '0';
-				while (num[3] <= '9')
-				{
-					ft_printchar(num[0], num[1], num[2], num[3]);
-					num[3]++;
-				}
-				num[2]++;
+				write(1, &printer[index], 1);
+				index++;
 			}
-			num[1]++;
+			if (a < 98)
+			{
+				write(1, ", ", 2);
+			}
+			b++;
 		}
-	num[0]++;
+		a++;
 	}
 }
 
 int	main(void)
 {
 	ft_print_comb2();
-	return (0);
+	return 0;
 }
