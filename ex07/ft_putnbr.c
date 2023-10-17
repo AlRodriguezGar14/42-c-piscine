@@ -6,7 +6,7 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 19:17:56 by alberrod          #+#    #+#             */
-/*   Updated: 2023/10/17 12:30:27 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/10/17 13:28:26 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ void	ft_putnbr(int nb)
 	int		tmp;
 	char	printable;
 
-	n = 10;
+	n = 1;
 	if (nb < 0)
 	{
 		nb = nb * -1;
 		write(1, "-", 1);
 	}
 	tmp = nb;
-	while (tmp > 90)
+	while (tmp > 9)
 	{
 		tmp = tmp / 10;
 		n = n * 10;
@@ -40,8 +40,8 @@ void	ft_putnbr(int nb)
 	}
 }
 
-/* int	main(void) */
-/* { */
-/* 	ft_putnbr(-444); */
-/* 	return (0); */
-/* } */
+int	main(void)
+{
+	ft_putnbr(500);
+	return (0);
+}
