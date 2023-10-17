@@ -5,50 +5,43 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 10:28:53 by alberrod          #+#    #+#             */
-/*   Updated: 2023/10/16 19:36:23 by alberrod         ###   ########.fr       */
+/*   Created: 2023/10/17 12:39:38 by alberrod          #+#    #+#             */
+/*   Updated: 2023/10/17 13:51:52 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_char(char hundreth, char decimal, char numeral)
-{
-	write(1, &hundreth, 1);
-	write(1, &decimal, 1);
-	write(1, &numeral, 1);
-	if (!(numeral == '9' && decimal == numeral - 1  && hundreth == decimal - 1))
-	{
-		write(1, ", ", 2);
-	}
-}
-
 void	ft_print_comb(void)
 {
-	char	numeral;
-	char	decimal;
-	char	hundreth;
+	int		base_number;
+	char	out[3];
+	int		index;
 
-	hundreth = '0';
-	while (hundreth != decimal)
+	base_number  = 0;
+	while(base_number < 999)
 	{
-		decimal = hundreth + 1;
-		while (decimal != numeral)
+		out[0] = base_number / 100 + '0';
+		out[1] = (base_number % 100) / 10 + '0';
+		out[2] = (base_number % 10) % 10 + '0';
+
+		if(!(out[0] >= out[1] || out[1] >= out[2] || out[0] >= out[2]))
 		{
-			numeral = decimal + 1;
-			while (numeral <= '9')
+			index = 0;
+			while(index <= 2)
 			{
-				ft_print_char(hundreth, decimal, numeral);
-				numeral++;
+				write(1, &out[index], 1);
+				index++;
 			}
-			decimal++;
+			if (out[0] < '7')
+				write(1, ", ", 1);
 		}
-		hundreth++;
+		base_number++;
 	}
 }
 
 int	main(void)
 {
 	ft_print_comb();
-	return (0);
+	return 0;
 }
