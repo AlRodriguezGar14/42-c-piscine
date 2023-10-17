@@ -6,26 +6,27 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 19:17:56 by alberrod          #+#    #+#             */
-/*   Updated: 2023/10/17 13:28:26 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/10/17 20:48:24 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_putnbr(int nb)
 {
 	int		n;
-	int		tmp;
+	long	operator;
+	long	tmp;
 	char	printable;
 
 	n = 1;
-	if (nb < 0)
+	operator = nb;
+	if (operator < 0)
 	{
-		nb = nb * -1;
+		operator = operator * -1;
 		write(1, "-", 1);
 	}
-	tmp = nb;
+	tmp = operator;
 	while (tmp > 9)
 	{
 		tmp = tmp / 10;
@@ -33,15 +34,15 @@ void	ft_putnbr(int nb)
 	}
 	while (n > 0)
 	{
-		printable = (nb / n) + '0';
+		printable = (operator / n) + '0';
 		write(1, &printable, 1);
-		nb = nb % n;
+		operator = operator % n;
 		n = n / 10;
 	}
 }
 
 int	main(void)
 {
-	ft_putnbr(500);
+	ft_putnbr(-2147483648);
 	return (0);
 }
