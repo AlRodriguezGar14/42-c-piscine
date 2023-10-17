@@ -6,7 +6,7 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 12:39:38 by alberrod          #+#    #+#             */
-/*   Updated: 2023/10/17 13:51:52 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/10/17 14:12:43 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	ft_print_comb(void)
 	char	out[3];
 	int		index;
 
-	base_number  = 0;
-	while(base_number < 999)
+	base_number = 0;
+	while (base_number < 999)
 	{
 		out[0] = base_number / 100 + '0';
 		out[1] = (base_number % 100) / 10 + '0';
