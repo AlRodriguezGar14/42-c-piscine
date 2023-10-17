@@ -6,7 +6,7 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 12:39:38 by alberrod          #+#    #+#             */
-/*   Updated: 2023/10/17 14:12:43 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/10/17 17:26:52 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_print_comb(void)
 				index++;
 			}
 			if (out[0] < '7')
-				write(1, ", ", 1);
+				write(1, ", ", 2);
 		}
 		base_number++;
 	}
