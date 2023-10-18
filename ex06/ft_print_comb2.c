@@ -6,7 +6,7 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 13:58:03 by alberrod          #+#    #+#             */
-/*   Updated: 2023/10/17 17:20:28 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/10/18 20:57:51 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ void	ft_print_comb2(void)
 	}
 }
 
-int	main(void)
-{
-	ft_print_comb2();
-	return (0);
-}
+/* int	main(void) */
+/* { */
+/* 	ft_print_comb2(); */
+/* 	return (0); */
+/* } */

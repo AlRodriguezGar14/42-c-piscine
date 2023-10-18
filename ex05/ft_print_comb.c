@@ -6,7 +6,7 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 12:39:38 by alberrod          #+#    #+#             */
-/*   Updated: 2023/10/17 17:28:10 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/10/18 20:56:30 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ void	ft_print_comb(void)
 		out[0] = base_number / 100 + '0';
 		out[1] = (base_number % 100) / 10 + '0';
 		out[2] = (base_number % 10) % 10 + '0';
-
-		if(!(out[0] >= out[1] || out[1] >= out[2] || out[0] >= out[2]))
+		if (!(out[0] >= out[1] || out[1] >= out[2] || out[0] >= out[2]))
 		{
 			write(1, &out, 3);
 			if (out[0] < '7')
@@ -34,8 +33,8 @@ void	ft_print_comb(void)
 	}
 }
 
-int	main(void)
-{
-	ft_print_comb();
-	return 0;
-}
+/* int	main(void) */
+/* { */
+/* 	ft_print_comb(); */
+/* 	return (0); */
+/* } */

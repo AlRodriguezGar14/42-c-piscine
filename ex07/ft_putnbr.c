@@ -6,7 +6,7 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 19:17:56 by alberrod          #+#    #+#             */
-/*   Updated: 2023/10/17 20:48:24 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/10/18 20:58:41 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ void	ft_putnbr(int nb)
 	}
 }
 
-int	main(void)
-{
-	ft_putnbr(-2147483648);
-	return (0);
-}
+/* int	main(void) */
+/* { */
+/* 	ft_putnbr(-2147483648); */
+/* 	return (0); */
+/* } */

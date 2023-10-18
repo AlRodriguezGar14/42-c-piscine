@@ -6,7 +6,7 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 19:54:33 by alberrod          #+#    #+#             */
-/*   Updated: 2023/10/15 20:05:04 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/10/18 20:39:34 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,9 @@ void	ft_print_numbers(void)
 		printable_number++;
 	}
 }
+
+/* int	main(void) */
+/* { */
+/* 	ft_print_numbers(); */
+/* 	return (0); */
+/* } */
