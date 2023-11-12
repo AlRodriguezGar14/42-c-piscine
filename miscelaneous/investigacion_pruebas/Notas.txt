@@ -1,0 +1,41 @@
+File descriptor (FD)	-->	0 keyboard 
+			-->	1 screen output
+			-->	2 error output
+
+
+<unistd.h> 	function
+<fcntl.h>	flags		O_RDONLY	O_EXCL
+	int open (const char* Path, int flags);
+		-> fd
+		-> -1 fallo
+
+<unistd.h>
+	int close(int fd);
+		-> 0 	éxito
+		-> -1 	error
+
+
+<unistd.h>
+	size_t read (int fd, void* buf, size_t cnt);
+		-> nº of bytes read
+		-> 0 upon reaching the end of the file
+		-> -1 error or signal interrupt
+
+
+Heap Memory	--> dynamical memory		Stack memory	--> static memory 
+		--> global					
+				
+¿Free?	--> libera la memoria, ¿pero lo que hay dentro?
+
+
+
+
+
+SOBRE DICCIONARIOS (MAPAS)
+____________________________
+Dos array con las claves (keys) y los valores (values).
+Para cada pareja hay un índice común en el array
+	Si obtengo el índice de la clave puedo acceder al valor asociado.
+	Para conseguir dicho índice tengo que recorrer el array keys y usar:
+		String Compare --> ft_strcmp(clave_buscada, keys[I])
+
